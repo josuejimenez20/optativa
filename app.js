@@ -1,8 +1,11 @@
 require('colors');
 const { inquirerMenu } = require('./menus/inquirer');
 const {loadDatabase} = require('./load_database/loadDatabase');
+const { dbConnection } = require('./database/config');
 
 const main = async () => {
+
+    dbConnection();
 
     let opt = '';
 
