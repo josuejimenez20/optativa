@@ -1,7 +1,7 @@
 let mysql = require('mysql');
 let conexion = mysql.createConnection({
     host: 'localhost',
-    database: 'parking4u',
+    database: 'optativa',
     user: 'root',
     password: 'johnwick2003',
 });

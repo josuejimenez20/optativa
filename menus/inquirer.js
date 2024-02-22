@@ -10,27 +10,31 @@ const questions = [
         choices: [
             {
                 value: '1',
-                name: '1. Cargar archivo SVC'
+                name: '1. Informacion del software'
             },
             {
                 value: '2',
-                name: '2. Visualizar alumnos con bajo rendimiento'
+                name: '2. Alumnos con mayor probabilidad de desertar'
             },
             {
                 value: '3',
-                name: '3. Visualizar alumnos con peligro de descenso'
+                name: '3. Ciclo con mayor numero de desertores'
             },
             {
                 value: '4',
-                name: '4. Vistualizar alumnos en NO peligro de descenso'
+                name: '4. Ciclo con menor numero de desertores'
             },
             {
                 value: '5',
-                name: '5. Descargar base de datos'
+                name: '5. Ciclo escolar con peor rate de satisfaccion'
             },
             {
                 value: '6',
-                name: `6. ${'Salir'.red}`
+                name: '6. Alumnos con bajo interes '
+            },
+            {
+                value: '7',
+                name: `7. ${'Salir'.red}`
             },
         ]
     }
