@@ -1,7 +1,12 @@
 require('colors');
 const { inquirerMenu } = require('./menus/inquirer');
-const {loadDatabase} = require('./load_database/loadDatabase');
+const { loadDatabase } = require('./load_database/loadDatabase');
 const { dbConnection } = require('./database/config');
+const { obtenerPeligroEnDesercion } = require('./menus/desercion/desercion');
+const { cicloEscolarDesercion } = require('./menus/desercion/cicloEscolar');
+const { cicloEscolarMenorDesercion } = require('./menus/desercion/cicloEscolarMenorDesertores');
+const { ciclosEscolarPeorSatisfaccion } = require('./menus/satisfaccion/cicloPeorSatisfaccion');
+const { alumnosBajoInteres } = require('./menus/interes/alumnosBajoInteres');
 
 const main = async () => {
 
@@ -9,14 +14,33 @@ const main = async () => {
 
     let opt = '';
 
-        do {
-            opt = await inquirerMenu();
-                    
-            if(opt.opcion === '1') {
+    do {
+        opt = await inquirerMenu();
+
+        switch (opt.opcion) {
+            case '1':
                 await loadDatabase();
-            }
-            
-        } while (opt.opcion !== '6');
+                break;
+            case '2':
+                await obtenerPeligroEnDesercion();
+                break;
+            case '3':
+                await cicloEscolarDesercion();
+                break;
+            case '4':
+                await cicloEscolarMenorDesercion();
+                break;
+            case '5':
+                await ciclosEscolarPeorSatisfaccion();
+                break;
+            case '6':
+                await alumnosBajoInteres();
+                break;
+            default:
+                break;
+        }
+
+    } while (opt.opcion !== '7');
 
 }
 
