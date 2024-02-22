@@ -8,7 +8,8 @@ function ciclosEscolarPeorSatisfaccionModel() {
             SELECT * 
             FROM estadistica
             ORDER BY puntaje_satisfaccion 
-            ASC;`,
+            ASC
+            LIMIT 5;`,
             function (error, result, field) {
                 if (error)
                     return reject(error);

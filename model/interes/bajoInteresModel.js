@@ -9,7 +9,8 @@ function alumnoBajoInteresModel() {
             FROM alumno a
             JOIN resultado_encuesta re
             ON a.id=re.id_alumno 
-            ORDER BY re.grado_interes ASC;`,
+            ORDER BY re.grado_interes ASC
+            LIMIT 5;`,
             function (error, result, field) {
                 if (error)
                     return reject(error);

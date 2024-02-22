@@ -7,7 +7,8 @@ function cicloEscolarDesercionModel() {
             `
             SELECT * 
             FROM estadistica 
-            ORDER BY numero_desertores DESC;`,
+            ORDER BY numero_desertores DESC
+            LIMIT 5;`,
             function (error, result, field) {
                 if (error)
                     return reject(error);
