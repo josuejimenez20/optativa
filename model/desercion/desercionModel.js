@@ -9,7 +9,8 @@ function obtenerPeligroEnDesercionModelo() {
             FROM alumno a
             JOIN probabilidad p 
             ON a.id = p.id_alumno
-            ORDER BY p.probabilidad DESC;`,
+            ORDER BY p.probabilidad DESC
+            LIMIT 5;`,
             function (error, result, field) {
                 if (error)
                     return reject(error);
